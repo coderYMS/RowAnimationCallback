@@ -15,6 +15,7 @@
 		C026D0322066038F00EDD491 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C026D0312066038F00EDD491 /* main.m */; };
 		C026D03C2066039000EDD491 /* RowAnimationCallbackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C026D03B2066039000EDD491 /* RowAnimationCallbackTests.m */; };
 		C026D0472066039000EDD491 /* RowAnimationCallbackUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C026D0462066039000EDD491 /* RowAnimationCallbackUITests.m */; };
+		C026D056206603D400EDD491 /* UITableView+YMRowAnimationCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = C026D055206603D400EDD491 /* UITableView+YMRowAnimationCallback.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		C026D0422066039000EDD491 /* RowAnimationCallbackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RowAnimationCallbackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C026D0462066039000EDD491 /* RowAnimationCallbackUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RowAnimationCallbackUITests.m; sourceTree = "<group>"; };
 		C026D0482066039000EDD491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C026D054206603D400EDD491 /* UITableView+YMRowAnimationCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+YMRowAnimationCallback.h"; sourceTree = "<group>"; };
+		C026D055206603D400EDD491 /* UITableView+YMRowAnimationCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+YMRowAnimationCallback.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				C026D0232066038F00EDD491 /* AppDelegate.m */,
 				C026D0252066038F00EDD491 /* ViewController.h */,
 				C026D0262066038F00EDD491 /* ViewController.m */,
+				C026D054206603D400EDD491 /* UITableView+YMRowAnimationCallback.h */,
+				C026D055206603D400EDD491 /* UITableView+YMRowAnimationCallback.m */,
 				C026D0282066038F00EDD491 /* Main.storyboard */,
 				C026D02B2066038F00EDD491 /* Assets.xcassets */,
 				C026D02D2066038F00EDD491 /* LaunchScreen.storyboard */,
@@ -267,6 +272,7 @@
 			files = (
 				C026D0272066038F00EDD491 /* ViewController.m in Sources */,
 				C026D0322066038F00EDD491 /* main.m in Sources */,
+				C026D056206603D400EDD491 /* UITableView+YMRowAnimationCallback.m in Sources */,
 				C026D0242066038F00EDD491 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
