@@ -31,16 +31,12 @@ cell被delete之后，新的cell上来并不会刷新，所以需要手动更新
 	既然直接写不能实现效果，就想需要在动画结束之后，再执行后续操作。首先想到的就是scrollView的delegate。<br>
 	点进去delegate，有这几个方法：
 	
-	- 	```
-	scrollViewDidEndDecelerating:
-	```
+	- 	```scrollViewDidEndDecelerating:```
 	<br>
 	在```WillBeginDecelerating```的注释中写着 
 	"called on finger up as we are moving"，也就是手动才会触发。不能用。<br>
 
-	- 	```
-	scrollViewDidEndScrollingAnimation:
-	```
+	- 	```scrollViewDidEndScrollingAnimation:```
 	<br>
 	这个方法的注释里也写着"called when setContentOffset/scrollRectVisible:animated: finishes."，而table的rowAnimation也不会触发，不能用.
 
@@ -56,8 +52,9 @@ cell被delete之后，新的cell上来并不会刷新，所以需要手动更新
 
 ## 解决思路
 删除cell调用的方法是：
-```- (void)deleteRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths 
-withRowAnimation:(UITableViewRowAnimation)animation;
+```
+- (void)deleteRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths 
+	withRowAnimation:(UITableViewRowAnimation)animation;
 ```
 顾名思义，这是带有动画的。。。
 顺着这个思路，尝试去给animation相关的方法打断点。
