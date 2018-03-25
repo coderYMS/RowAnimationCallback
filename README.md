@@ -7,7 +7,7 @@
 <img src="http://144.202.36.88/source/deleterow.gif" title="demo image" title="delete row image" style="display:block; margin:auto" width="200"/>
 
 
-中间这部分是随便扯一扯的，想看实现，直接跳到 [实现方案](#fangan)
+中间这部分是随便扯一扯的，想看实现，直接跳到 [实现方案](#实现方案)
 
 收到这个需求，觉得很简单：
 
