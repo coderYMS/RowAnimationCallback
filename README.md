@@ -33,7 +33,7 @@ cell被delete之后，新的cell上来并不会刷新，所以需要手动更新
 	
 	- 	```scrollViewDidEndDecelerating:```
 	<br>
-	在```WillBeginDecelerating```的注释中写着 
+	在 ```WillBeginDecelerating``` 的注释中写着 
 	"called on finger up as we are moving"，也就是手动才会触发。不能用。<br>
 
 	- 	```scrollViewDidEndScrollingAnimation:```
