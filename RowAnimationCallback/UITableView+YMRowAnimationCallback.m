@@ -13,12 +13,10 @@
 - (void)ym_animatAction:(void(^)(UITableView *table))action
                complete:(void(^)(UITableView *table))callback {
     [CATransaction begin];
-    [self beginUpdates];
     [CATransaction setCompletionBlock:^{
         callback(self);
     }];
     action(self);
-    [self endUpdates];
     [CATransaction commit];
 }
 

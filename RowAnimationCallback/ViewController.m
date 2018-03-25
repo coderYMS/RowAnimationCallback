@@ -35,13 +35,25 @@
         return;
     }
     [_dataArr removeObjectAtIndex:0];
+    [UIView commitAnimations]
+//    [_mainTable ym_animatAction:^(UITableView *table) {
+//        [table deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationTop];
+//    } complete:^(UITableView *table) {
+//        [table reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+//    }];
+//    [CATransaction begin];
+//    [CATransaction setCompletionBlock:^{
+//        [_mainTable reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+//    }];
+//    [_mainTable deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationTop];
+//    [CATransaction commit];
 
     [_mainTable ym_animatAction:^(UITableView *table) {
-        [table deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationTop];
+        <#code#>
     } complete:^(UITableView *table) {
-        [table reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+        <#code#>
     }];
-
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
