@@ -1,4 +1,4 @@
-#RowAnimationCallback
+# RowAnimationCallback
 
 最近有这样一个需求：
 >cell展示内容，第一行高亮；用户读完第一行，第二个cell滚到顶，然后高亮；这样滚出去的cell不能再被滚回来；用户只能读一条，少一条。
@@ -54,7 +54,7 @@ cell被delete之后，新的cell上来并不会刷新，所以需要手动更新
 	- 等等等等
 - 作为一个有追求的工程师，肯定是要去寻找真正的解决方案。
 
-##解决思路
+## 解决思路
 删除cell调用的方法是：
 ```- (void)deleteRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths 
 withRowAnimation:(UITableViewRowAnimation)animation;
@@ -77,7 +77,7 @@ withRowAnimation:(UITableViewRowAnimation)animation;
 而且官方还给了个demo，大意是这个begin()和commit()可以嵌套，先commit内侧动画，再commit外侧动画。
 
 
-##<span id = "fangan">实现方案</span>
+## <span id = "fangan">实现方案</span>
 其实具体实现非常简单：
 
 ```
@@ -119,11 +119,10 @@ withRowAnimation:(UITableViewRowAnimation)animation;
 
 ```
 
-##one more thing
+## one more thing
 这里使用CATransaction来处理这个动画，只是一个比较简洁的做法。<br>
 同理，也有很多其他思路：比如说从UIView的```setAnimationDidStopSelector:```方法入手。以后有机会再来研究。
 
-最后，上面的代码写了一个demo，在 [GitHub](https://github.com/coderYMS/RowAnimationCallback)
 
 
 
