@@ -1,7 +1,7 @@
 # RowAnimationCallback
 
 最近有这样一个需求：
->cell展示内容，第一行高亮；用户读完第一行，第二个cell滚到顶，然后高亮；这样滚出去的cell不能再被滚回来；用户只能读一条，少一条。
+>table的第一行高亮，第一行用完以后删掉，第二行成为第一行，并高亮。
 
 大致效果是这样的：
 <img src="http://144.202.36.88/source/deleterow.gif" title="demo image" title="delete row image" style="display:block; margin:auto" width="200"/>
@@ -33,7 +33,7 @@ cell被delete之后，新的cell上来并不会刷新，所以需要手动更新
 	
 	- 	```scrollViewDidEndDecelerating:```
 	<br>
-	在 ```WillBeginDecelerating``` 的注释中写着 
+	在 ``` scrollViewWillBeginDecelerating ``` 的注释中写着 
 	"called on finger up as we are moving"，也就是手动才会触发。不能用。<br>
 
 	- 	```scrollViewDidEndScrollingAnimation:```
